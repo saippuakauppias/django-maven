@@ -12,7 +12,7 @@ setup(
     license='ISC',
     description='Capture exceptions in django management commands '
                 'into Sentry by Raven',
-    long_description=read('README.md'),
+    long_description=read('README.md') + read('CHANGES.md'),
     keywords='django exception management command sentry raven raise error',
     url='https://github.com/saippuakauppias/django-maven',
     author='Denis Veselov',
