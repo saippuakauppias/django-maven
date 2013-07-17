@@ -4,9 +4,11 @@ from optparse import OptionParser
 from django.conf import settings
 from django.core.management import get_commands, load_command_class
 from django.core.management.base import (BaseCommand, handle_default_options,
-                                         CommandError, OutputWrapper)
+                                         CommandError)
 
 from raven import Client
+
+from django_maven.compat import OutputWrapper
 
 
 class Command(BaseCommand):
