@@ -31,15 +31,15 @@ Add `maven` command by first argument for manage.py in your management command s
 
 For example, this is command without `django-maven`:
 
-    $ python manage.py dumpdata --exclude=app -n -a
+    $ python manage.py rebuild_index --noinput
 
 And command with `django-maven`:
 
-    $ python manage.py maven dumpdata --exclude=app -n -a
+    $ python manage.py maven rebuild_index --noinput
 
-If command (`dumpdata`) raising exception you see their in your Sentry.
+If `rebuild_index` command raising exception (server die or error creating index) you see their in your Sentry.
 
 The name
 --------
 
-*django-maven* is django management raven.
+**django-maven** is django Management rAVEN.
