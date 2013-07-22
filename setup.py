@@ -8,12 +8,13 @@ def read(filename):
 
 setup(
     name='django-maven',
-    version='0.1',
+    version='0.2',
     license='ISC',
     description='Capture exceptions in django management commands '
                 'into Sentry by Raven',
     long_description=read('README.md') + read('CHANGES.md'),
-    keywords='django exception management command sentry raven raise error',
+    keywords='django exception management command sentry raven raise error '
+             'handling log logging',
     url='https://github.com/saippuakauppias/django-maven',
     author='Denis Veselov',
     author_email='progr.mail@gmail.com',
