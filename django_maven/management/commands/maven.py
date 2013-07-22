@@ -53,9 +53,13 @@ class Command(BaseCommand):
             subcommand_class.execute(*args, **options.__dict__)
         except Exception as e:
             if not isinstance(e, CommandError):
-                if not hasattr(settings, 'SENTRY_DSN'):
+                if hasattr(settings, 'SENTRY_DSN'):
+                    dsn = settings.SENTRY_DSN
+                elif hasattr(settings, 'RAVEN_CONFIG'):
+                    dsn = settings.RAVEN_CONFIG.get('dsn')
+                else:
                     raise
-                sentry = Client(settings.SENTRY_DSN)
+                sentry = Client(dsn)
                 sentry.get_ident(sentry.captureException())
 
             self._write_error_in_stderr(e)
