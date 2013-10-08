@@ -43,3 +43,7 @@ The name
 --------
 
 **django-maven** is django Management rAVEN.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/saippuakauppias/django-maven/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
